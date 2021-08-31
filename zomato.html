@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    /* #page{
+        overflow: auto;
+    } */
+#main{
+    position: absolute;
+    top:10vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+    #image{
+    background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:60vh;
+    }
+    #desp{
+        font-size: 300%;
+        font-weight: 300;
+        color:white;
+        margin-bottom: 3%;
+    }
+    #zoma{
+        font-size: 600%;
+        font-weight:900;
+        color:white;
+    }
+     input[type=text]
+    {
+        width:100%;
+        border:none;
+        font-size: 1rem;
+        padding-left:10px;
+        outline: none;
+    }
+    input[type=email]{
+        padding:15px;
+        width:35vh;
+        margin:5%;
+        margin-left: 0%;
+        border:1px solid black;
+        border-radius: 5px;
+        font-size: 100%;
+    }
+    
+    #right{
+        position: absolute;
+        top:5px;
+        right:5px;
+        color:white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:200px;
+        padding: 20px;
+        font-size: 120%;
+    }
+    #left{
+        position: absolute;
+        top:5px;
+        left:5px;
+        color:white;
+        padding: 20px;
+        font-size: 100%;
+        font-weight: bold;
+        margin-left: 5%;
+    }
+    #middle{
+        align-content: center;
+        margin-top:5vh;
+        font-size: 220%;
+    }
+    #box{
+        position:absolute;
+        bottom:10vh;
+        padding: 20px;
+        font-size: 150%;
+        margin-left: 8%;
+        border: 3px solid whitesmoke;
+        border-radius: 10px;
+        box-shadow:50px #888888;
+    }
+    #mobile_frame{
+        margin-top: 18%;
+        width:100%;
+        background-color:#FEFBF6;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #app{
+        width:40vw;
+        align-items: center;
+        padding:2%;
+    }
+    #explore{
+        width:100%;
+        height:60vh;
+    }
+    .button {
+        background-color: #ED5A6B;
+        border: none;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #get{
+        font-size: 300%;
+        margin-bottom:2%;
+    }
+    #pp{
+        font-size: 110%;
+        margin: 5%;
+        margin-left:0%;
+    }
+    #icon{
+        margin: 5%;
+        margin-top: 0%;
+        margin-left:0%;
+    }
+    #up{
+        margin:3%;
+    }
+    .sec{
+        margin:3%;
+    }
+    .cuisine{
+        margin-left: 3%;
+    }
+    .options{
+        box-sizing: border-box;
+        display: flex;
+        width:80vw;
+        flex-direction: row;
+        /* justify-content:space-between; */
+        align-content:flex-start;
+        flex-wrap: wrap;
+        font-size: 120%;
+        color: grey;
+    }
+    #search_bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width:50%;
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    .fa-map-marker{
+        color:#f57089;
+    }
+    .fa-search{
+        color:grey;
+    }
+    #loc{
+        border: none;
+        font-size: 1rem;
+        color: grey;
+        outline: none;
+    }
+    #seperator{
+        width: 5px;
+        height:25px;
+        border-left:2px solid grey;     
+    }
+    #feild{
+        flex-grow:70;
+    }
+    #search{
+        padding-left: 5px;
+    }
+    li{
+        margin-left: 2%;
+    }
+
+</style>
+<body>
+    <div id="page">
+        <div id="image">
+        <div id="left">
+            Get the app
+        </div>
+        <div id="right">
+            <div>Login</div>
+            <div>Sign Up</div>
+        </div>
+        <div id="main">
+            <div id="zoma">
+                <center>
+                    zomato
+                </center>
+            </div>
+            <div id="desp">
+                <center>
+                    <p>
+                        Discover the best food & drinks in Bangalore
+                    </p>
+                </center>
+            </div>
+            <div id="search_bar">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                    <div id="location">
+                        <select name=" " id="loc">
+                                <option value=" ">Bangalore,Karnataka</option>
+                                <option value=" ">Hyderabad,Andhra Pradesh</option>
+                                <option value=" ">Chennai,Tamil Nadu</option>
+                        </select>
+                    </div>
+                    <div id="seperator">
+                    </div>
+                    <div id="search">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div id="feild">
+                        <input type="text" placeholder="Search for a restuarant, cuisine or dish">
+                    </div>
+            </div>
+        </div>
+        </div>
+        <div>
+            <div id="middle">
+                <center>
+                    Popular localities in and around <b>Food Street, Bangalore</b>
+                </center>
+            </div>
+            <div id="box">
+                Food Street(11 Places)<i class="fa fa-angle-right" style="padding-left:10px;"></i>
+            </div>
+        </div>
+        <div id="mobile_frame">
+            <div>
+                <img src="app.png" width="300px" height="500px" style="display:block;">
+            </div>
+            <div id="app">
+                <h1 id="get">Get the Zomato App</h1>
+                <p id="pp">We will send you a link, open it on your phone to download the app</p>
+                <input type="radio" checked="checked" name="radio">
+                    <label class="container">Email
+                        <span class="checkmark"></span>
+                      </label>
+                      <input type="radio" name="radio">
+                      <label class="container">Phone
+                        <span class="checkmark"></span>
+                      </label><br>
+                 
+                  <input type="email" placeholder="Email" name="email">
+                  <a href="#" class="button">Share App Link</a>
+                  <p id="icon">Download app from</p>
+                  <img src="appStore.png" width="150px" height="40px">
+                  <img src="playStore.png" width="150px" height="40px">
+            </div>
+        </div>
+        <div id="explore">
+                <h1 id="up">Explore other options for you here</h1>
+                <h2 class="sec">Popular cuisines near me</h2>
+                <div class="cuisine">
+                    <ul class="options">
+                        <li>American food near me</li>
+                        <li>Indian food near me</li>
+                        <li>Mexican food near me</li>
+                        <li>Bar food near me</li>
+                        <li>Italian food near me</li>
+                        <li>Thai food near me</li>
+                        <li>Mexican food near me</li>
+                        <li>Bar food near me</li>
+                        <li>Italian food near me</li>
+                        <li>Thai food near me</li>
+                    </ul>
+                </div>
+                <h2 class="sec">Popular restaurant types near me</h2>
+                <div class="cuisine">
+                    <ul class="options">
+                        <li>Bakeries near me</li>
+                        <li>Bars near me</li>
+                        <li>Cafe near me</li>
+                        <li>Quick Bites near me</li>
+                        <li>Sandwich shops near me</li>
+                        <li>Bars near me</li>
+                        <li>Cafe near me</li>
+                        <li>Quick Bites near me</li>
+                        <li>Sandwich shops near me</li>
+                    </ul>
+                </div>
+                
+        </div>
+    </div>
+    
+    
+</body>
+</html>
